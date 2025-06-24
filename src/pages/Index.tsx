@@ -2,8 +2,11 @@
 import Header from '@/components/Header';
 import HeroSection from '@/components/HeroSection';
 import TrustedBySection from '@/components/TrustedBySection';
+import DemoSection from '@/components/DemoSection';
 import FeaturesSection from '@/components/FeaturesSection';
+import UseCasesSection from '@/components/UseCasesSection';
 import PrivacySection from '@/components/PrivacySection';
+import GetStartedSection from '@/components/GetStartedSection';
 import Footer from '@/components/Footer';
 
 const Index = () => {
@@ -12,8 +15,11 @@ const Index = () => {
       <Header />
       <HeroSection />
       <TrustedBySection />
+      <DemoSection />
       <FeaturesSection />
+      <UseCasesSection />
       <PrivacySection />
+      <GetStartedSection />
       <Footer />
     </div>
   );
