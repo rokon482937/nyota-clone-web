@@ -21,7 +21,7 @@ const DemoSection = () => {
               <span className="relative">
                 <span className="text-blue-500">O</span>
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-16 h-16 lg:w-20 lg:h-20 bg-blue-500 rounded-full flex items-center justify-center">
+                  <div className="w-16 h-16 lg:w-20 lg:h-20 bg-blue-500 rounded-full flex items-center justify-center cursor-pointer hover:bg-blue-600 transition-colors">
                     <Play className="w-8 h-8 lg:w-10 lg:h-10 text-white ml-1" />
                   </div>
                 </div>

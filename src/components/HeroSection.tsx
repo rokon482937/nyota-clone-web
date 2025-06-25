@@ -5,43 +5,38 @@ import { Play } from 'lucide-react';
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen bg-gradient-to-br from-blue-400 via-blue-500 to-blue-600 pt-20 pb-16 overflow-hidden">
-      {/* Gradient Background Elements */}
-      <div className="absolute top-0 right-0 w-2/3 h-full bg-gradient-to-l from-blue-600 to-blue-400 opacity-80"></div>
-      <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-bl from-blue-300 to-transparent opacity-50 rounded-l-full"></div>
-      <div className="absolute bottom-0 left-0 w-1/3 h-2/3 bg-gradient-to-tr from-blue-700 to-transparent opacity-30"></div>
-      
+    <section className="relative min-h-screen bg-white pt-20 pb-16 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center min-h-[calc(100vh-8rem)]">
           {/* Left Content */}
           <div className="space-y-8 text-left">
-            <h1 className="text-5xl lg:text-6xl font-bold leading-tight text-white">
+            <h1 className="text-5xl lg:text-6xl font-bold leading-tight text-gray-900">
               The best{' '}
-              <span className="text-white">AI Notetaker</span>
+              <span className="text-blue-600">AI Notetaker</span>
               <br />
               to align{' '}
-              <span className="text-blue-100">sales, support,</span>
+              <span className="text-gray-700">sales, support,</span>
               <br />
-              <span className="text-blue-100">and project teams</span>
+              <span className="text-gray-700">and project teams</span>
             </h1>
             
-            <p className="text-lg text-blue-50 leading-relaxed max-w-2xl">
+            <p className="text-lg text-gray-600 leading-relaxed max-w-2xl">
               Automate your <strong>data entry and call workflows</strong>. Update your{' '}
               <strong>CRMs and project tools</strong> from your meeting notes and{' '}
               <strong>share updates</strong> with your team without the hassle.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button className="bg-white hover:bg-gray-100 text-blue-600 px-8 py-4 text-lg rounded-lg font-semibold shadow-lg">
+              <Button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg rounded-lg font-semibold shadow-lg">
                 Try Nyota free trial
               </Button>
-              <Button variant="outline" className="px-8 py-4 text-lg rounded-lg border-2 border-white text-white hover:bg-white/10 font-semibold">
+              <Button variant="outline" className="px-8 py-4 text-lg rounded-lg border-2 border-gray-300 text-gray-700 hover:bg-gray-50 font-semibold">
                 <Play className="w-5 h-5 mr-2" />
                 How it works
               </Button>
             </div>
 
-            <p className="text-sm text-blue-100">Start a 7-day free trial</p>
+            <p className="text-sm text-gray-500">Start a 7-day free trial</p>
           </div>
 
           {/* Right Content - Video Call Interface */}
