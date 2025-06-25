@@ -11,22 +11,22 @@ const TrustedBySection = () => {
   ];
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-12 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <p className="text-blue-600 font-medium mb-4 uppercase tracking-wide text-sm">OUR USERS</p>
-          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+        <div className="text-center mb-8">
+          <p className="text-blue-600 font-medium mb-3 uppercase tracking-wide text-sm">OUR USERS</p>
+          <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-3">
             Trusted by 1000s of teams
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Join <strong>thousands of teams</strong> already using Nyota to automate their meeting workflows
           </p>
         </div>
 
-        <div className="flex flex-wrap justify-center items-center gap-8 lg:gap-12 opacity-60">
+        <div className="flex flex-wrap justify-center items-center gap-6 lg:gap-8 opacity-70">
           {companies.map((company, index) => (
-            <div key={index} className="flex items-center space-x-3 text-xl lg:text-2xl font-bold text-gray-700">
-              <span className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-base">
+            <div key={index} className="flex items-center space-x-2 text-lg lg:text-xl font-semibold text-gray-600">
+              <span className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center text-sm">
                 {company.logo}
               </span>
               <span>{company.name}</span>

@@ -6,18 +6,21 @@ import { Play } from 'lucide-react';
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen bg-white pt-20 pb-16 overflow-hidden">
+      {/* Blue gradient background on the right */}
+      <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-br from-blue-400 to-blue-600 transform skew-x-12 translate-x-1/4"></div>
+      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center min-h-[calc(100vh-8rem)]">
           {/* Left Content */}
           <div className="space-y-8 text-left">
             <h1 className="text-5xl lg:text-6xl font-bold leading-tight text-gray-900">
               The best{' '}
-              <span className="text-blue-600">AI Notetaker</span>
+              <span className="text-black">AI Notetaker</span>
               <br />
               to align{' '}
-              <span className="text-gray-700">sales, support,</span>
+              <span className="text-blue-600">sales, support,</span>
               <br />
-              <span className="text-gray-700">and project teams</span>
+              <span className="text-blue-600">and project teams</span>
             </h1>
             
             <p className="text-lg text-gray-600 leading-relaxed max-w-2xl">
@@ -40,7 +43,7 @@ const HeroSection = () => {
           </div>
 
           {/* Right Content - Video Call Interface */}
-          <div className="relative">
+          <div className="relative z-20">
             {/* Main Video Call Window */}
             <div className="relative bg-gray-900 rounded-xl shadow-2xl overflow-hidden">
               {/* Browser Header */}
@@ -80,46 +83,50 @@ const HeroSection = () => {
                   <span className="text-green-400 text-xs">Nyota</span>
                 </div>
               </div>
-              
-              {/* Meeting Controls Bar */}
-              <div className="p-4 bg-gray-800 border-t border-gray-700">
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center space-x-2">
-                    <div className="w-2 h-2 bg-red-500 rounded-full"></div>
-                    <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
-                    <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                  </div>
-                  <div className="text-white text-sm">Thread Meeting</div>
-                  <div className="w-6"></div>
+            </div>
+
+            {/* Floating Chat Interface - Challenges */}
+            <div className="absolute -right-8 top-16 bg-white rounded-xl shadow-2xl p-4 w-80 border border-gray-200">
+              <div className="flex items-center justify-between mb-4">
+                <h3 className="font-semibold text-gray-900">Challenges</h3>
+                <div className="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center">
+                  <span className="text-white text-xs">!</span>
+                </div>
+              </div>
+              <div className="space-y-3">
+                <div className="flex items-start space-x-2">
+                  <div className="w-2 h-2 bg-red-500 rounded-full mt-2"></div>
+                  <p className="text-sm text-gray-700">Capacity regarding testing page, marketing stuff including Ray and Simon</p>
+                </div>
+                <div className="flex items-start space-x-2">
+                  <div className="w-2 h-2 bg-orange-500 rounded-full mt-2"></div>
+                  <p className="text-sm text-gray-700">Mike and Sandra discuss the scope creep on the current marketing project.</p>
+                </div>
+                <div className="flex items-start space-x-2">
+                  <div className="w-2 h-2 bg-orange-500 rounded-full mt-2"></div>
+                  <p className="text-sm text-gray-700">They decide to check with Ray to see if he can help and to time box the project.</p>
                 </div>
               </div>
             </div>
 
-            {/* Floating Chat Interface */}
-            <div className="absolute -right-8 top-16 bg-white rounded-xl shadow-2xl p-4 w-80 border border-gray-200">
-              <div className="space-y-4">
-                <div className="flex items-start space-x-3">
-                  <div className="w-10 h-10 bg-gray-300 rounded-full flex items-center justify-center">
-                    <span className="text-gray-600 text-sm font-medium">You</span>
-                  </div>
-                  <div className="flex-1">
-                    <p className="text-sm text-gray-600 mb-1">How are you feeling about all the marketing stuff?</p>
-                  </div>
+            {/* Thread Nyota Chat */}
+            <div className="absolute -bottom-8 -left-8 bg-white rounded-xl shadow-2xl p-4 w-80 border border-gray-200">
+              <div className="flex items-center space-x-3 mb-3">
+                <div className="w-8 h-8 bg-gray-900 rounded flex items-center justify-center">
+                  <span className="text-white text-xs font-bold">TN</span>
                 </div>
-                
-                <div className="flex items-start space-x-3">
-                  <div className="w-10 h-10 bg-gray-300 rounded-full"></div>
-                  <div className="flex-1">
-                    <p className="text-sm text-gray-600 mb-1">Not great. We've got a bit of a scope creep. I had a few more requests coming from the marketing team. So I'm not sure if I'll get to the settings page this week.</p>
+                <span className="font-semibold text-gray-900">Thread Nyota</span>
+                <span className="text-red-500 text-xs bg-red-100 px-2 py-1 rounded">Rec</span>
+              </div>
+              <div className="space-y-2">
+                <div className="flex items-center space-x-2">
+                  <div className="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center">
+                    <span className="text-xs">MF</span>
                   </div>
+                  <span className="text-sm text-gray-600">Mike Fischer</span>
+                  <span className="text-xs text-gray-400">11:02 AM</span>
                 </div>
-                
-                <div className="flex items-start space-x-3">
-                  <div className="w-10 h-10 bg-gray-300 rounded-full"></div>
-                  <div className="flex-1">
-                    <p className="text-sm text-gray-600">Alright, let's check with Ray if he's able to help and I'll work with Simon on time boxing this.</p>
-                  </div>
-                </div>
+                <p className="text-sm text-gray-700">Today I got a full list of requirements from Simon and I timeline the marketing asks</p>
               </div>
             </div>
           </div>
