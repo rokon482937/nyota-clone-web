@@ -6,14 +6,15 @@ import { Play } from 'lucide-react';
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen bg-white pt-20 pb-16 overflow-hidden">
-      {/* Blue gradient background on the right */}
-      <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-br from-blue-400 to-blue-600 transform skew-x-12 translate-x-1/4"></div>
+      {/* Blue gradient background - positioned differently on mobile */}
+      <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-br from-blue-400 to-blue-600 transform skew-x-12 translate-x-1/4 hidden lg:block"></div>
+      <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-tr from-blue-400 to-blue-600 transform -skew-x-12 translate-y-12 block lg:hidden"></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center min-h-[calc(100vh-8rem)]">
           {/* Left Content */}
           <div className="space-y-8 text-left">
-            <h1 className="text-5xl lg:text-6xl font-bold leading-tight text-gray-900">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-gray-900">
               The best{' '}
               <span className="text-black">AI Notetaker</span>
               <br />
@@ -43,7 +44,7 @@ const HeroSection = () => {
           </div>
 
           {/* Right Content - Video Call Interface */}
-          <div className="relative z-20">
+          <div className="relative z-20 order-first lg:order-last">
             {/* Main Video Call Window */}
             <div className="relative bg-gray-900 rounded-xl shadow-2xl overflow-hidden">
               {/* Browser Header */}
@@ -86,7 +87,7 @@ const HeroSection = () => {
             </div>
 
             {/* Floating Chat Interface - Challenges */}
-            <div className="absolute -right-8 top-16 bg-white rounded-xl shadow-2xl p-4 w-80 border border-gray-200">
+            <div className="absolute -right-8 top-16 bg-white rounded-xl shadow-2xl p-4 w-80 border border-gray-200 hidden lg:block">
               <div className="flex items-center justify-between mb-4">
                 <h3 className="font-semibold text-gray-900">Challenges</h3>
                 <div className="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center">
@@ -110,7 +111,7 @@ const HeroSection = () => {
             </div>
 
             {/* Thread Nyota Chat */}
-            <div className="absolute -bottom-8 -left-8 bg-white rounded-xl shadow-2xl p-4 w-80 border border-gray-200">
+            <div className="absolute -bottom-8 -left-8 bg-white rounded-xl shadow-2xl p-4 w-80 border border-gray-200 hidden lg:block">
               <div className="flex items-center space-x-3 mb-3">
                 <div className="w-8 h-8 bg-gray-900 rounded flex items-center justify-center">
                   <span className="text-white text-xs font-bold">TN</span>
