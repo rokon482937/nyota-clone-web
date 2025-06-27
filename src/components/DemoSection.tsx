@@ -13,16 +13,19 @@ const DemoSection = () => {
             How Nyota works
           </h2>
           
-          {/* Video Section */}
-          <video 
-            className="max-w-4xl mx-auto mb-20 w-full rounded-lg shadow-lg bg-white"
-            controls
-            poster="/placeholder.svg"
-            style={{ aspectRatio: '16/9' }}
-          >
-            <source src="/demo-video.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
+          {/* YouTube Video Section */}
+          <div className="max-w-4xl mx-auto mb-20">
+            <div className="relative bg-white rounded-lg shadow-lg overflow-hidden" style={{ aspectRatio: '16/9' }}>
+              <iframe
+                className="w-full h-full"
+                src="https://www.youtube.com/embed/PcBGFSi8ZJ0"
+                title="Nyota Demo Video"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              ></iframe>
+            </div>
+          </div>
           
           {/* Large NYOTA Logo */}
           <div className="flex items-center justify-center">
