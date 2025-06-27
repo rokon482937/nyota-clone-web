@@ -14,18 +14,15 @@ const DemoSection = () => {
           </h2>
           
           {/* Video Section */}
-          <div className="max-w-4xl mx-auto mb-20">
-            <div className="relative bg-white rounded-lg shadow-lg overflow-hidden">
-              <div className="aspect-video bg-gray-100 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-20 h-20 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4 cursor-pointer hover:bg-blue-600 transition-colors">
-                    <Play className="w-8 h-8 text-white ml-1" />
-                  </div>
-                  <p className="text-gray-600">Click to play demo video</p>
-                </div>
-              </div>
-            </div>
-          </div>
+          <video 
+            className="max-w-4xl mx-auto mb-20 w-full rounded-lg shadow-lg bg-white"
+            controls
+            poster="/placeholder.svg"
+            style={{ aspectRatio: '16/9' }}
+          >
+            <source src="/demo-video.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
           
           {/* Large NYOTA Logo */}
           <div className="flex items-center justify-center">
