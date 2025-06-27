@@ -13,8 +13,22 @@ const DemoSection = () => {
             How Nyota works
           </h2>
           
+          {/* Video Section */}
+          <div className="max-w-4xl mx-auto mb-20">
+            <div className="relative bg-white rounded-lg shadow-lg overflow-hidden">
+              <div className="aspect-video bg-gray-100 flex items-center justify-center">
+                <div className="text-center">
+                  <div className="w-20 h-20 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4 cursor-pointer hover:bg-blue-600 transition-colors">
+                    <Play className="w-8 h-8 text-white ml-1" />
+                  </div>
+                  <p className="text-gray-600">Click to play demo video</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
           {/* Large NYOTA Logo */}
-          <div className="flex items-center justify-center mb-20">
+          <div className="flex items-center justify-center">
             <div className="text-8xl lg:text-9xl font-bold tracking-wider">
               <span className="text-green-400">N</span>
               <span className="text-green-400">Y</span>
